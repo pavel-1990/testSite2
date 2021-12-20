@@ -1,0 +1,6 @@
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Origin "*"
+</IfModule>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-REQUEST_FILENAME
+RewriteRule ^(.+)$ index.php?q=$1 [L,QSA]
